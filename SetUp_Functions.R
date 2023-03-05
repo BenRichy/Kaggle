@@ -15,9 +15,9 @@ import_Kaggle <- function(KaggleCreds, OwnerDataset, FileImportPath){
   response <- kgl_datasets_download_all(owner_dataset = OwnerDataset)
   download.file(response[["url"]], FileImportPath, mode="wb")
   #import data to temporary zip file
-  unzip_result <- unzip(paste0(FileImportPath,"temp.zip"), exdir = FileImportPath, overwrite = TRUE)
+  unzip_result <- unzip(paste0(FileImportPath,"data.zip"), exdir = FileImportPath, overwrite = TRUE)
   #delete temporary zip file
-  unlink(paste0(FileImportPath,"temp.zip"))
+  unlink(paste0(FileImportPath,"data.zip"))
   
 }
 
