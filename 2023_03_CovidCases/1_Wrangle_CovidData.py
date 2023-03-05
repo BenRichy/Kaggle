@@ -1,5 +1,6 @@
 # 1_Wrangle_CovidData
-# Th
+# This is just some test code to play with siuba and get the kaggle import working
+
 # %% Import packages
 import pandas as pd
 from siuba import *
@@ -16,6 +17,7 @@ su_test = (
     summarize(sum = _.total_infected.sum()/1000000)
 )
 print(su_test)
+
 
 # %% plot using seaborn
 sb.relplot(data=covid_data, x="total_infected", y="total_deaths")
