@@ -1,0 +1,1 @@
+RETICULATE_PYTHON=v_env/Scripts/python
